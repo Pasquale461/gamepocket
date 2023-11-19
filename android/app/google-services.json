@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "64577881746",
+    "project_id": "gamepocketapp",
+    "storage_bucket": "gamepocketapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:64577881746:android:faae1b69c6eb5130f8084b",
+        "android_client_info": {
+          "package_name": "com.game.pocket.gamepocket"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCXgXEjQYlzDG6Zj0BdRlnyKX6fFlt-0d0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
