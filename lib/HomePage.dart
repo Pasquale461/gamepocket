@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:firebase_core/firebase_core.dart';
 import 'package:gamepocket/Auth.dart';
 import 'package:gamepocket/AuthPage.dart';  // Aggiunto import per AuthPage
-import 'firebase_options.dart';
 
 class Homepage extends StatelessWidget {
   const Homepage({Key? key}) : super(key: key);

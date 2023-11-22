@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:gamepocket/Auth.dart';
-import 'HomePage.dart' as HomePage;
 import 'AuthPage.dart';
 import 'HomePage.dart';
 import 'firebase_options.dart';
+import 'package:flutter_signin_button/flutter_signin_button.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -12,7 +12,7 @@ void main() async {
     options: DefaultFirebaseOptions.currentPlatform,
   );
 
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -23,21 +23,21 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple.shade200),
         useMaterial3: true,
       ),
       home: FutureBuilder<bool>(
         future: Auth().checkIfLoggedIn(),
         builder: (context, snapshot) {
           if (snapshot.connectionState == ConnectionState.waiting) {
-            return CircularProgressIndicator();
+            return const CircularProgressIndicator();
           } else if (snapshot.hasError) {
-            return Text("Errore durante la verifica dell'autenticazione");
+            return const Text("Errore durante la verifica dell'autenticazione");
           } else {
             if (snapshot.data == true) {
-              return Homepage();
+              return const Homepage();
             } else {
-              return AuthPage();
+              return const AuthPage();
             }
           }
         },

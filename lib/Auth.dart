@@ -18,7 +18,7 @@ Future<String?> getnameofUser () async
 {
 
 
-  String? Name = await _firebaseauth.currentUser?.displayName;
+  String? Name = _firebaseauth.currentUser?.displayName;
   print(Name);
   return Name;
 }
